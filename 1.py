@@ -1,8 +1,7 @@
-print('input your number : ', end = '')
-input_num1 = int(input())
+res = 0
 
-print('input your second number : ', end = '')
-input_num2 = int(input())
+for n in range(1000):
+    if n%3 == 0 or n%5 == 0:
+        res += n
 
-sum = input_num1+input_num2
-print('sum is %s' %sum)
+print(res)
