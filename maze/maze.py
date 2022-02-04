@@ -1,7 +1,7 @@
 import os
-import maze_functions as mfunc
+import maze.maze_functions as mfunc
 import maze_settings as mset
-from maze_map import Map
+from maze.maze_map import Map
 
 maze_map = Map()
 loaded_map = maze_map.load_map()

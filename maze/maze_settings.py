@@ -1,4 +1,4 @@
-import maze_functions as mfunc
+import maze.maze_functions as mfunc
 
 
 FILE_LOCATION_MAP = 'maze_map.txt'
