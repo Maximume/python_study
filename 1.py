@@ -1,7 +1,12 @@
-res = 0
+a = [1, 2, 3]
+b = [1, 2, 3]
 
-for n in range(1000):
-    if n%3 == 0 or n%5 == 0:
-        res += n
+ab = a is b
 
-print(res)
+aa = (1, 2, 3)
+bb = (1, 2, 3)
+
+aabb = aa is bb
+
+print(ab)
+print(aabb)
