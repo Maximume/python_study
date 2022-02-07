@@ -1,12 +1,10 @@
-a = [1, 2, 3]
-b = [1, 2, 3]
+f = open('maze\\maze_map.txt', 'a')
 
-ab = a is b
+line = f.readlines()
+f.close()
+line[0] = line[0].split()
 
-aa = (1, 2, 3)
-bb = (1, 2, 3)
+print(f)
+print(line)
 
-aabb = aa is bb
-
-print(ab)
-print(aabb)
+f.close()

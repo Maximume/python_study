@@ -1,12 +1,12 @@
 # A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-# 1. for calculate index I need to know range 100 * 100 to 999 * 999
+# 1. for calculate range, I need to know range 100 * 100 to 999 * 999
 
 min = 100 * 100
 max = 999 * 999 #min 10000, max 998001
 
-# 2. number of digits of min and max is not same. so divide range by 10000 ~ 99999, 100000 ~ 998001
+# 2. number of digits of min and max is not same. so divide range by 10000 ~ 99999, 100000 ~ 998001? but still compare [2] = [-3], cool!
 # 3. combination number doesn't have to be same numbers
 # 4. number of digits of min and max is not same. but still they are 5~6digits
 # 5. It means I can compare [0],[-1], [1],[-2] regardless digits
@@ -41,3 +41,13 @@ for i in range(100, 999):
             break       #913, 993
 
 # 12. largest palindrome made from the product of two 3-digit numbers is 906609, and combination is (913, 993)
+
+# +1.(10.~) 906609 / 999 is over 900. so when I trace back when 906609 is generated, range might start with over 800 not 100
+
+for i in range(800, 999):
+    for j in range(800, 999):
+        if i*j == 906609:
+            print (i,j)
+            break       #913, 993
+
+# +2.(10.~) It means it takes only 40,000 calculation instead of 810,000. It's 20 times effective!
