@@ -1,9 +1,11 @@
+import sys
 import maze_settings as mset
 
 class Map():
     def __init__(self):
         self.f = open(mset.FILE_LOCATION_MAP, 'r')
         self.loaded_map = self.f.readlines()
+        self.loaded_map = list(reversed(self.loaded_map))
         self.f.close()
 
         self.map_size = len(self.loaded_map)
@@ -12,7 +14,7 @@ class Map():
         wall_arounding = 2
 
         init_size = map_size + wall_arounding
-        initialized_map = [['x']*init_size for _ in range(init_size)]
+        initialized_map = [['X']*init_size for _ in range(init_size)]
 
         return initialized_map
 
@@ -29,7 +31,10 @@ class Map():
         return game_map
 
     def show_map(self, game_map):
-        for map_lines in game_map:
-            for tile in map_lines:
-                print(tile, end = ' ')
-            print()
+        game_map_reversed = list(reversed(game_map))
+        if sys.argv[-1] == '-d':
+            print('<<Debug Mode>>')
+            for map_lines in game_map_reversed:
+                for tile in map_lines:
+                    print(tile, end = ' ')
+                print()
