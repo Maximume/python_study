@@ -13,10 +13,10 @@
 sumOFsquares = 0
 squareOFsum = 0
 sum = 0
-for i in range(100):
-    sumOFsquares += i ** 2
+for i in range(100 + 1):
+    sumOFsquares += (i ** 2)
     sum += i
-squareOFsum = sum ** 2
+squareOFsum = (sum ** 2)
 
 difference = squareOFsum - sumOFsquares
 print(difference)
