@@ -1,36 +1,21 @@
 import os
 import maze_functions as mfunc
-import maze_settings as mset
 from maze_map import Map
+from maze_settings import *
 
-#initialize and load map
-maze_map = Map()
-game_map = maze_map.load_map()
+#init_game()
+from maze_init import *
 
-#initialize points
-starting_point = mfunc.set_Point(game_map, mset.TILE_STARTING)
-ending_point = mfunc.set_Point(game_map, mset.TILE_ENDING)
-current_coord = starting_point
-
-#initailize variables
-move_count = 0
-move_last = 0
-move_input = 0
-is_blocked = 0
+#select mode
+mfunc.mode_select()
 
 #main loop
-while current_coord != ending_point:
-    
+while current_coord != finish_coord:
     os.system('cls')
     #show map run with debug mode
     maze_map.show_map(game_map)
-
-    #get input value
-    move_input = mfunc.input_move_input(move_count, current_coord, game_map)
-    #set cursor pointing direction
-    move_last = mfunc.get_move_last(move_last, move_input)
-
-    coord = mfunc.get_coords(current_coord)
-    current_coord = coord[move_last]
-
+    #get input
+    move_input = mfunc.input_move_input(move_count, current_coord, finish_coord, game_map)
+    #move
+    current_coord = mfunc.get_coord(current_coord)[move_input]
     move_count += 1

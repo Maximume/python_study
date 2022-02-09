@@ -17,4 +17,4 @@ for i in range(2, limit):
 sum = 0
 for i in prime_list:
     sum += i
-print(sum)
+print(sum) #142913828922
