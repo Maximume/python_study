@@ -1,40 +1,59 @@
-#file const
-FILE_LOCATION_MAP = 'maze_map.txt'
-#tile value
-TILE_WALL = 'X'
-TILE_START = 'S'
-TILE_FINISH = 'F'
-TILE_VALID = 'o'
-#map padding
-MAP_PADDING = 1
-WALL_PADDING = 2
-#directions
-TILE_UP = 0
-TILE_RIGHT = 1
-TILE_DOWN = 2
-TILE_LEFT = 3
-#index for coord x, y
-COORD_X = 0
-COORD_Y = 1
-#input directions value
-INPUT_UP = '0'
-INPUT_RIGHT = '1'
-INPUT_DOWN = '2'
-INPUT_LEFT = '3'
-#direction msg
-MSG_UP = ' up = 0 '
-MSG_RIGHT = ' right = 1 '
-MSG_DOWN = ' down = 2 '
-MSG_LEFT = ' left = 3 '
-#msg to user
-MSG_INVALID = 'Invalid input!!'
-MSG_ASK_DIRECTION = 'Where to go? : '
-MSG_INFO = 'Moves [%d]   Goal %s   Current Location %s'
-MSG_WELCOME = 'PRESS ENTER TO PLAY\n'
-#msg for functions
-MSG_EMPTY = ''
-MSG_DEBUG = '<<Debug Mode>>'
-MAP_DISPLAY_PADDING = ' '
-#options
-OPTION_DEBUG = '-d'
-KEY_DEBUG = 'black sheep wall'
+class File_value():
+    def __init__(self) -> None:
+        self.LOCATION_MAP = 'maze_map.txt'
+FILE_VALUE = File_value()
+
+class Tile_value():
+    def __init__(self) -> None:
+        self.WALL = 'X'
+        self.START = 'S'
+        self.FINISH = 'F'
+        self.VALID = 'o'
+        #directions
+        self.UP = 0
+        self.RIGHT = 1
+        self.DOWN = 2
+        self.LEFT = 3
+TILE_VALUE = Tile_value()
+
+class Padding_value():
+    def __init__(self) -> None:
+        self.MAP = 1
+        self.WALL = 2
+        self.MAP_DISPLAY = ' '
+PADDING_VALUE = Padding_value()
+
+class Coord():
+    def __init__(self) -> None:
+        self.X = 0
+        self.Y = 1
+COORD = Coord()
+
+class Input_value():
+    def __init__(self) -> None:
+        self.UP = '0'
+        self.RIGHT = '1'
+        self.DOWN = '2'
+        self.LEFT = '3'
+INPUT_VALUE = Input_value()
+
+class Msg_text():
+    def __init__(self) -> None:
+        #direction msg
+        self.UP = ' up = 0 '
+        self.RIGHT = ' right = 1 '
+        self.DOWN = ' down = 2 '
+        self.LEFT = ' left = 3 '
+        self.INVALID = 'Invalid input!!'
+        self.ASK_DIRECTION = 'Where to go? : '
+        self.INFO = 'Moves [%d]   Goal %s   Current Location %s'
+        self.WELCOME = 'PRESS ENTER TO PLAY\n'
+        self.EMPTY = ''
+MSG_TEXT = Msg_text()
+
+class Debug():
+    def __init__(self) -> None:
+        self.MSG = '<<Debug Mode>>'
+        self.OPTION = '-d'
+        self.KEY = 'black sheep wall'
+DEBUG = Debug()

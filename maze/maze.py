@@ -1,6 +1,5 @@
 import os
 import maze_functions as mfunc
-from maze_map import Map
 from maze_settings import *
 
 #init_game()
@@ -12,7 +11,7 @@ mfunc.mode_select()
 #main loop
 while current_coord != finish_coord:
     os.system('cls')
-    #show map run with debug mode
+    #show map (run with debug mode)
     maze_map.show_map(game_map)
     #get input
     move_input = mfunc.input_move_input(move_count, current_coord, finish_coord, game_map)
