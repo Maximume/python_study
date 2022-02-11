@@ -13,8 +13,8 @@ def init_coord() -> None:
     global start_coord
     global finish_coord
     global current_coord
-    start_coord = mfunc.set_coord(game_map, TILE_VALUE.START)
-    finish_coord = mfunc.set_coord(game_map, TILE_VALUE.FINISH)
+    start_coord = mfunc.set_coord(game_map, CONST_TILE.START)
+    finish_coord = mfunc.set_coord(game_map, CONST_TILE.FINISH)
     current_coord = start_coord
 
 def init_var() -> None:

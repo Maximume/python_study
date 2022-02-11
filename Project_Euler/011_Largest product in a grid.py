@@ -79,7 +79,7 @@ for y, lines in enumerate(grid):     #enumerate() return <<index, value>>
             pass
         if res > gp:
             gp = res
-print(gp)
+print(gp) #51267216
 
 # 7. left, right (horizontal) check
 for y, lines in enumerate(grid):     #enumerate() return <<index, value>>
@@ -90,7 +90,7 @@ for y, lines in enumerate(grid):     #enumerate() return <<index, value>>
             pass
         if res > gp:
             gp = res
-print(gp)
+print(gp) #still 51267216
 
 # 8. diagonally top right check
 
@@ -102,7 +102,7 @@ for y, lines in enumerate(grid):     #enumerate() return <<index, value>>
             pass
         if res > gp:
             gp = res
-print(gp)
+print(gp) #still 51267216
 
 # 9. diagonally bottom right check
 
@@ -114,4 +114,4 @@ for y, lines in enumerate(grid):     #enumerate() return <<index, value>>
             pass
         if res > gp:
             gp = res
-print(gp)
+print(gp) #70600674
