@@ -12,3 +12,31 @@
 
 # Find C(100000), enter the last nine digits as your answer.
 
+ln = [
+[[0,0]]
+]
+
+for i in range(20):
+    ln_1 = []
+    for case in ln:
+        for coord in case:
+            temp_case = case[:]
+            temp_case.remove(coord)
+            coord_yp = (coord[1]+1)%4
+            modified0 = [coord[0]+1, coord[1]]
+            modified1 = [coord[0]+1, coord_yp]
+            if modified0 in temp_case or modified1 in temp_case:
+                pass
+            else:
+                temp_case.append(modified0)
+                temp_case.append(modified1)
+                temp_case.sort()
+                if temp_case in ln_1:
+                    pass
+                else:
+                    ln_1.append(temp_case)
+    ln = ln_1[:]
+    print('C', i+1, ' : ', len(ln_1))
+
+    # for j in ln:
+    #     print(j)
