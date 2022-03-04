@@ -7,8 +7,13 @@ maze = f.readlines()
 for lines in range(len(maze)):
     maze[lines] = maze[lines].split()
 
-start = (8, 0)
-end = (0, 8)
+for x, line in enumerate(maze):
+    for y, tile in enumerate(line):
+        if tile == 'S':
+            start = (x, y)
+        if tile == 'F':
+            end = (x, y)
+
 
 class Node:
     def __init__(self, parent = None, position = None) -> None:
@@ -37,7 +42,7 @@ def aStar() -> list:
     while openList:
         currentNode = openList[0]
 
-        for idx, item in enumerate(openList):
+        for item in openList:
             if item.f < currentNode.f:
                 currentNode = item
 
@@ -96,7 +101,8 @@ def aStar() -> list:
             if len([openNode for openNode in openList if new_node == openNode and new_node.g > openNode.g]) > 0:
                 continue
                     
-            openList.append(new_node)
+            openList.insert(0, new_node)
+
 
 def main():
     os.system('cls')
