@@ -36,3 +36,11 @@
 * 기능 단위의 모듈화
 * 의미가 반영된 변수 Clean Code
 * 세팅 및 변수 파라미터 관리가 용이한 모듈화
+
+## Path findfing Algorithm
+
+* A star
+  * code review
+  * path finding (maze) 구현
+* dijikstra
+  * code review
