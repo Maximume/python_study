@@ -39,8 +39,11 @@
 
 ## Path findfing Algorithm
 
-* A star
+* A star Algorithm
+  * A satr 알고리즘 구조 분석, 구현 방식 확인
   * code review
   * path finding (maze) 구현
+  
 * dijikstra
+  * 다익스트라 알고리즘 구조 분석, 구현 방식 리뷰, 직접 구현
   * code review
